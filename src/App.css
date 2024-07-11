@@ -1,38 +1,142 @@
-.App {
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --card-background: #f8f9fa;
+  --card-foreground: #1a1a1a;
+  --primary: #007bff;
+  --primary-foreground: #ffffff;
+  --secondary: #6c757d;
+  --secondary-foreground: #ffffff;
+  --input-border: #ced4da;
+  --input-background: #ffffff;
+  --radius: 0.5rem;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--secondary-foreground);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+.header-logo {
+  height: 2.5rem;
+}
+
+.main-heading {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-heading h1 {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-heading p {
+  margin-top: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section {
+  padding: 2rem;
+}
+
+section h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background-color: var(--card-background);
+  color: var(--card-foreground);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.card p {
+  margin-top: 0.5rem;
+}
+
+form .input-field {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  background-color: var(--input-background);
+}
+
+form .primary-btn {
+  background-color: #6c757d;
+  color: var(--primary-foreground);
+  padding: 0.5rem;
+  border: none;
+  border-radius: var(--radius);
+  width: 100%;
+}
+
+form .primary-btn:hover {
+  background-color: #007bff;
+}
+
+footer {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  padding: 1rem;
+  text-align: center;
+}
+#ubicacion{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  align-items: center;
 }
